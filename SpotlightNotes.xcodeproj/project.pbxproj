@@ -14,6 +14,7 @@
 		DB9113042AB69793009FD902 /* SpotlightNotesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9113032AB69793009FD902 /* SpotlightNotesUITests.swift */; };
 		DB9113062AB69793009FD902 /* SpotlightNotesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9113052AB69793009FD902 /* SpotlightNotesUITestsLaunchTests.swift */; };
 		DB9113132AB69B29009FD902 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9113122AB69B29009FD902 /* main.swift */; };
+		DB9113162AB69FA6009FD902 /* KeyboardShortcuts in Frameworks */ = {isa = PBXBuildFile; productRef = DB9113152AB69FA6009FD902 /* KeyboardShortcuts */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB9113162AB69FA6009FD902 /* KeyboardShortcuts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,6 +139,9 @@
 			dependencies = (
 			);
 			name = SpotlightNotes;
+			packageProductDependencies = (
+				DB9113152AB69FA6009FD902 /* KeyboardShortcuts */,
+			);
 			productName = SpotlightNotes;
 			productReference = DB9112E42AB69792009FD902 /* SpotlightNotes.app */;
 			productType = "com.apple.product-type.application";
@@ -209,6 +214,9 @@
 				Base,
 			);
 			mainGroup = DB9112DB2AB69792009FD902;
+			packageReferences = (
+				DB9113142AB69FA6009FD902 /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */,
+			);
 			productRefGroup = DB9112E52AB69792009FD902 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -573,6 +581,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DB9113142AB69FA6009FD902 /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sindresorhus/KeyboardShortcuts";
+			requirement = {
+				kind = exactVersion;
+				version = 1.14.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DB9113152AB69FA6009FD902 /* KeyboardShortcuts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DB9113142AB69FA6009FD902 /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */;
+			productName = KeyboardShortcuts;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DB9112DC2AB69792009FD902 /* Project object */;
 }
