@@ -9,16 +9,22 @@ import Cocoa
 import KeyboardShortcuts
 
 class AppDelegate: NSObject, NSApplicationDelegate {
-    private var window: NSWindow!
+    private var notesWindow: NotesWindow!
 
     private var isVisible = false
 
-    func applicationDidFinishLaunching(_ aNotification: Notification) {
-        NSApp.setActivationPolicy(.accessory)
+    private var statusItem: NSStatusItem!
 
-        window = NSWindow(contentRect: NSRect(x: 0, y: 0, width: 480, height: 270), styleMask: [], backing: .buffered, defer: false)
-        window.center()
-        window.level = .floating
+    func applicationDidFinishLaunching(_ aNotification: Notification) {
+        notesWindow = NotesWindow()
+
+        statusItem = NSStatusBar.system.statusItem(withLength:NSStatusItem.variableLength)
+
+        if let button = statusItem.button, #available(macOS 11.0, *) {
+            button.image = NSImage(systemSymbolName: "1.circle", accessibilityDescription: "1")
+        }
+
+        setupMenus()
 
         KeyboardShortcuts.onKeyUp(for: .showFloatingPanel) { [weak self] in
             self?.toggleWindow()
@@ -36,13 +42,26 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     private func toggleWindow() {
         if (isVisible) {
-            window.orderOut(self)
+            notesWindow.orderOut(self)
         } else {
-            window.makeKeyAndOrderFront(self)
+            notesWindow.makeKey()
+            notesWindow.orderFrontRegardless()
             NSApp.activate(ignoringOtherApps: true)
         }
 
         isVisible = !isVisible
+    }
+
+    private func setupMenus() {
+        let menu = NSMenu()
+
+        menu.addItem(NSMenuItem(title: "Quit", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q"))
+
+        statusItem.menu = menu
+    }
+
+    @objc func didTapQuit() {
+
     }
 }
 

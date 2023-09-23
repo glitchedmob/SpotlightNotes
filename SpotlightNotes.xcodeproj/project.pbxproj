@@ -15,6 +15,7 @@
 		DB9113062AB69793009FD902 /* SpotlightNotesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9113052AB69793009FD902 /* SpotlightNotesUITestsLaunchTests.swift */; };
 		DB9113132AB69B29009FD902 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9113122AB69B29009FD902 /* main.swift */; };
 		DB9113162AB69FA6009FD902 /* KeyboardShortcuts in Frameworks */ = {isa = PBXBuildFile; productRef = DB9113152AB69FA6009FD902 /* KeyboardShortcuts */; };
+		DB956AF42ABE895400AE4A25 /* NotesWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB956AF32ABE895400AE4A25 /* NotesWindow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		DB9113032AB69793009FD902 /* SpotlightNotesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotlightNotesUITests.swift; sourceTree = "<group>"; };
 		DB9113052AB69793009FD902 /* SpotlightNotesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotlightNotesUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		DB9113122AB69B29009FD902 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		DB956AF32ABE895400AE4A25 /* NotesWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesWindow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				DB9112EB2AB69793009FD902 /* Assets.xcassets */,
 				DB9112F02AB69793009FD902 /* SpotlightNotes.entitlements */,
 				DB9113122AB69B29009FD902 /* main.swift */,
+				DB956AF32ABE895400AE4A25 /* NotesWindow.swift */,
 			);
 			path = SpotlightNotes;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB9112EA2AB69792009FD902 /* ViewController.swift in Sources */,
+				DB956AF42ABE895400AE4A25 /* NotesWindow.swift in Sources */,
 				DB9112E82AB69792009FD902 /* AppDelegate.swift in Sources */,
 				DB9113132AB69B29009FD902 /* main.swift in Sources */,
 			);
@@ -427,6 +431,7 @@
 				DEVELOPMENT_TEAM = PYD876RQT2;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -454,6 +459,7 @@
 				DEVELOPMENT_TEAM = PYD876RQT2;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
